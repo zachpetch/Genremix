@@ -11,6 +11,9 @@
 		D49737092A209CD100EE8904 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49737082A209CD100EE8904 /* ContentView.swift */; };
 		D497370B2A209CD200EE8904 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D497370A2A209CD200EE8904 /* Assets.xcassets */; };
 		D497370E2A209CD200EE8904 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D497370D2A209CD200EE8904 /* Preview Assets.xcassets */; };
+		D49737182A209D4D00EE8904 /* A Simple Song of love - Dance.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D49737152A209D4C00EE8904 /* A Simple Song of love - Dance.m4a */; };
+		D49737192A209D4D00EE8904 /* A Simple Song of love - Sleepy.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D49737162A209D4C00EE8904 /* A Simple Song of love - Sleepy.m4a */; };
+		D497371A2A209D4D00EE8904 /* A Simple Song of love - Standard.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D49737172A209D4D00EE8904 /* A Simple Song of love - Standard.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		D49737082A209CD100EE8904 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D497370A2A209CD200EE8904 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D497370D2A209CD200EE8904 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D49737152A209D4C00EE8904 /* A Simple Song of love - Dance.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "A Simple Song of love - Dance.m4a"; sourceTree = "<group>"; };
+		D49737162A209D4C00EE8904 /* A Simple Song of love - Sleepy.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "A Simple Song of love - Sleepy.m4a"; sourceTree = "<group>"; };
+		D49737172A209D4D00EE8904 /* A Simple Song of love - Standard.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "A Simple Song of love - Standard.m4a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,7 @@
 		D49737052A209CD100EE8904 /* Genremix */ = {
 			isa = PBXGroup;
 			children = (
+				D49737142A209CD900EE8904 /* Music */,
 				D49737062A209CD100EE8904 /* GenremixApp.swift */,
 				D49737082A209CD100EE8904 /* ContentView.swift */,
 				D497370A2A209CD200EE8904 /* Assets.xcassets */,
@@ -65,6 +72,16 @@
 				D497370D2A209CD200EE8904 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D49737142A209CD900EE8904 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				D49737152A209D4C00EE8904 /* A Simple Song of love - Dance.m4a */,
+				D49737162A209D4C00EE8904 /* A Simple Song of love - Sleepy.m4a */,
+				D49737172A209D4D00EE8904 /* A Simple Song of love - Standard.m4a */,
+			);
+			path = Music;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +144,9 @@
 			files = (
 				D497370E2A209CD200EE8904 /* Preview Assets.xcassets in Resources */,
 				D497370B2A209CD200EE8904 /* Assets.xcassets in Resources */,
+				D49737192A209D4D00EE8904 /* A Simple Song of love - Sleepy.m4a in Resources */,
+				D49737182A209D4D00EE8904 /* A Simple Song of love - Dance.m4a in Resources */,
+				D497371A2A209D4D00EE8904 /* A Simple Song of love - Standard.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,11 +290,13 @@
 				DEVELOPMENT_TEAM = DX9L72QSF2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Genremix;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,11 +321,13 @@
 				DEVELOPMENT_TEAM = DX9L72QSF2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Genremix;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

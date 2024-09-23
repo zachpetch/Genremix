@@ -2,7 +2,7 @@
 //  GenremixApp.swift
 //  Genremix
 //
-//  Created by McHobbes on 2023-05-26.
+//  Created by Zach Petch on 2023-05-26.
 //
 
 import SwiftUI
