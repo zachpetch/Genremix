@@ -38,21 +38,21 @@ struct ContentView: View {
             HStack {
                 Spacer()
                 Button(action: {
-                    isPlaying ? playNormal() : doNothing()
+                    if isPlaying { switchGenre("Standard") }
                 }) {
                     Text("Standard")
                         .font(.headline)
                 }
                 Spacer()
                 Button(action: {
-                    isPlaying ? playSleepy() : doNothing()
+                    if isPlaying { switchGenre("Sleepy") }
                 }) {
                     Text("Sleepy")
                         .font(.headline)
                 }
                 Spacer()
                 Button(action: {
-                    isPlaying ? playElectro() : doNothing()
+                    if isPlaying { switchGenre("Dance") }
                 }) {
                     Text("Dance")
                         .font(.headline)
@@ -96,18 +96,16 @@ struct ContentView: View {
         audioPlayerB.pause()
     }
     
-    func playNormal() {
-        // Load the basic version of the song
-        guard let soundURL = Bundle.main.url(forResource: "A Simple Song of love - Standard", withExtension: "m4a") else {
-            print("Failed to find 'A Simple Song of love - Standard.m4a'")
+    func switchGenre(_ genre: String) {
+        guard let soundURL = Bundle.main.url(forResource: "A Simple Song of love - \(genre)", withExtension: "m4a") else {
+            print("Failed to find 'A Simple Song of love - \(genre).m4a'")
             return
         }
-        
+
         do {
             let newPlayer = try AVAudioPlayer(contentsOf: soundURL)
-            
             newPlayer.currentTime = getTimeStamp()
-            
+
             if isA {
                 audioPlayerB = newPlayer
                 audioPlayerB.play()
@@ -120,69 +118,7 @@ struct ContentView: View {
                 isA = true
             }
         } catch {
-            print("Failed to play Standard music: \(error)")
-        }
-    }
-    
-    func playElectro() {
-        // Load the Electro version of the song
-        guard let soundURL = Bundle.main.url(forResource: "A Simple Song of love - Dance", withExtension: "m4a") else {
-            print("Failed to find 'A Simple Song of love - Dance.m4a'")
-            return
-        }
-        
-        do {
-            // Create a new audio player for the Electro version
-            let newPlayer = try AVAudioPlayer(contentsOf: soundURL)
-            
-            // Set the current timestamp on the Electro player
-            newPlayer.currentTime = getTimeStamp()
-            
-            if isA {
-                audioPlayerB = newPlayer
-                audioPlayerB.play()
-                audioPlayerA.pause()
-                isA = false
-            } else {
-                audioPlayerA = newPlayer
-                audioPlayerA.play()
-                audioPlayerB.pause()
-                isA = true
-            }
-        } catch {
-            print("Failed to play Electro music: \(error)")
-        }
-    }
-    
-    func doNothing() {
-        print("Nothing doing")
-    }
-    
-    func playSleepy() {
-        // Load the basic version of the song
-        guard let soundURL = Bundle.main.url(forResource: "A Simple Song of love - Sleepy", withExtension: "m4a") else {
-            print("Failed to find 'A Simple Song of love - Sleepy.m4a'")
-            return
-        }
-        
-        do {
-            let newPlayer = try AVAudioPlayer(contentsOf: soundURL)
-            
-            newPlayer.currentTime = getTimeStamp()
-            
-            if isA {
-                audioPlayerB = newPlayer
-                audioPlayerB.play()
-                audioPlayerA.pause()
-                isA = false
-            } else {
-                audioPlayerA = newPlayer
-                audioPlayerA.play()
-                audioPlayerB.pause()
-                isA = true
-            }
-        } catch {
-            print("Failed to play Sleepy music: \(error)")
+            print("Failed to play \(genre) music: \(error)")
         }
     }
 }
