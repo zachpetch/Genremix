@@ -25,11 +25,9 @@ struct ContentView: View {
                 .font(.largeTitle)
             Button(action: {
                 isPlaying.toggle()
-                isPlaying ? startMusic() : stopMusic()
-//                isPlaying ? startMusic() : pauseMusic()
+                isPlaying ? startMusic() : pauseMusic()
             }) {
-//                Image(systemName: isPlaying ? "pause.circle.fill" : "play.circle.fill")
-                Image(systemName: isPlaying ? "stop.circle.fill" : "play.circle.fill")
+                Image(systemName: isPlaying ? "pause.circle.fill" : "play.circle.fill")
                     .resizable()
                     .frame(width: 80, height: 80)
                     .foregroundColor(.blue)
