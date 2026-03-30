@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D49737072A209CD100EE8904 /* GenremixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49737062A209CD100EE8904 /* GenremixApp.swift */; };
 		D49737092A209CD100EE8904 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49737082A209CD100EE8904 /* ContentView.swift */; };
+		D497371B2A209D5000EE8904 /* AudioPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D497371C2A209D5000EE8904 /* AudioPlayerViewModel.swift */; };
 		D497370B2A209CD200EE8904 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D497370A2A209CD200EE8904 /* Assets.xcassets */; };
 		D497370E2A209CD200EE8904 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D497370D2A209CD200EE8904 /* Preview Assets.xcassets */; };
 		D49737182A209D4D00EE8904 /* A Simple Song of love - Dance.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D49737152A209D4C00EE8904 /* A Simple Song of love - Dance.m4a */; };
@@ -25,6 +26,7 @@
 		D49737152A209D4C00EE8904 /* A Simple Song of love - Dance.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "A Simple Song of love - Dance.m4a"; sourceTree = "<group>"; };
 		D49737162A209D4C00EE8904 /* A Simple Song of love - Sleepy.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "A Simple Song of love - Sleepy.m4a"; sourceTree = "<group>"; };
 		D49737172A209D4D00EE8904 /* A Simple Song of love - Standard.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "A Simple Song of love - Standard.m4a"; sourceTree = "<group>"; };
+		D497371C2A209D5000EE8904 /* AudioPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				D49737142A209CD900EE8904 /* Music */,
 				D49737062A209CD100EE8904 /* GenremixApp.swift */,
 				D49737082A209CD100EE8904 /* ContentView.swift */,
+				D497371C2A209D5000EE8904 /* AudioPlayerViewModel.swift */,
 				D497370A2A209CD200EE8904 /* Assets.xcassets */,
 				D497370C2A209CD200EE8904 /* Preview Content */,
 			);
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D49737092A209CD100EE8904 /* ContentView.swift in Sources */,
+				D497371B2A209D5000EE8904 /* AudioPlayerViewModel.swift in Sources */,
 				D49737072A209CD100EE8904 /* GenremixApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
