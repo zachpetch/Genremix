@@ -17,6 +17,7 @@ struct ContentView: View {
     @State private var isPlaying = false
     @State private var startTime: Double = 0.0
     @State private var timeStamp: Double = 0.0
+    @State private var activeGenre: String = "Standard"
     
     var body: some View {
         VStack {
@@ -42,6 +43,7 @@ struct ContentView: View {
                 }) {
                     Text("Standard")
                         .font(.headline)
+                        .foregroundColor(isPlaying && activeGenre == "Standard" ? .blue : .gray)
                 }
                 Spacer()
                 Button(action: {
@@ -49,6 +51,7 @@ struct ContentView: View {
                 }) {
                     Text("Sleepy")
                         .font(.headline)
+                        .foregroundColor(isPlaying && activeGenre == "Sleepy" ? .blue : .gray)
                 }
                 Spacer()
                 Button(action: {
@@ -56,6 +59,7 @@ struct ContentView: View {
                 }) {
                     Text("Dance")
                         .font(.headline)
+                        .foregroundColor(isPlaying && activeGenre == "Dance" ? .blue : .gray)
                 }
                 Spacer()
             }
@@ -94,6 +98,7 @@ struct ContentView: View {
         timeStamp = 0.0
         audioPlayerA.pause()
         audioPlayerB.pause()
+        activeGenre = "Standard"
     }
     
     func playNormal() {
@@ -107,7 +112,8 @@ struct ContentView: View {
             let newPlayer = try AVAudioPlayer(contentsOf: soundURL)
             
             newPlayer.currentTime = getTimeStamp()
-            
+
+            activeGenre = "Standard"
             if isA {
                 audioPlayerB = newPlayer
                 audioPlayerB.play()
@@ -137,7 +143,8 @@ struct ContentView: View {
             
             // Set the current timestamp on the Electro player
             newPlayer.currentTime = getTimeStamp()
-            
+
+            activeGenre = "Dance"
             if isA {
                 audioPlayerB = newPlayer
                 audioPlayerB.play()
@@ -169,7 +176,8 @@ struct ContentView: View {
             let newPlayer = try AVAudioPlayer(contentsOf: soundURL)
             
             newPlayer.currentTime = getTimeStamp()
-            
+
+            activeGenre = "Sleepy"
             if isA {
                 audioPlayerB = newPlayer
                 audioPlayerB.play()
